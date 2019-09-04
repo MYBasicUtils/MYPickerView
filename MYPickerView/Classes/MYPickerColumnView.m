@@ -77,11 +77,17 @@
 #pragma mark - --------------------UITableViewDelegate--------------
 
 - (MYPickerColumnCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSAttributedString *text = [self.datas objectAtIndex:indexPath.row];
-    MYPickerColumnCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TYTimerPickerColumnCell"];
+    MYPickerColumnCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(MYPickerColumnCell.class) forIndexPath:indexPath];
+    if (!cell) {
+        cell = [[MYPickerColumnCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass(MYPickerColumnCell.class)];
+    }
     if (indexPath.section == 0 || indexPath.section == [tableView numberOfSections] - 1) {
         cell.label.text = @"";
     } else {
+        NSAttributedString *text;
+        if (self.datas.count) {
+            text = [self.datas objectAtIndex:indexPath.row];
+        }
         cell.selectFont = self.selectFont;
         cell.normalFont = self.normalFont;
         cell.selectTextColor = self.selectTextColor;
@@ -273,13 +279,14 @@
 }
 
 - (MYPickerTableView *)newTableView {
-    MYPickerTableView *tableView = [[MYPickerTableView alloc] init];
+    MYPickerTableView *tableView = [[MYPickerTableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableView.showsVerticalScrollIndicator = NO;
     tableView.delegate = self;
     tableView.dataSource = self;
     tableView.decelerationRate = UIScrollViewDecelerationRateFast;
-    [tableView registerClass:MYPickerColumnCell.class forCellReuseIdentifier:@"TYTimerPickerColumnCell"];
+    [tableView registerClass:MYPickerColumnCell.class
+      forCellReuseIdentifier:NSStringFromClass(MYPickerColumnCell.class)];
     return tableView;
 }
 
