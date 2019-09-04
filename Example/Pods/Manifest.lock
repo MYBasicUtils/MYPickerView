@@ -1,0 +1,16 @@
+PODS:
+  - MYPickerView (0.1.0)
+
+DEPENDENCIES:
+  - MYPickerView (from `../`)
+
+EXTERNAL SOURCES:
+  MYPickerView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MYPickerView: 285b4c7875cd68bbb1e5d4dc756939ee835c7942
+
+PODFILE CHECKSUM: d32a273970e3252d7dfde74342f599cab7ca9d85
+
+COCOAPODS: 1.7.4

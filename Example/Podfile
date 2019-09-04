@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'MYPickerView_Example' do
+  pod 'MYPickerView', :path => '../'
+
+  target 'MYPickerView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

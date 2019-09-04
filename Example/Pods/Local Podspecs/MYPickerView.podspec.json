@@ -1,0 +1,22 @@
+{
+  "name": "MYPickerView",
+  "version": "0.1.0",
+  "summary": "A short description of MYPickerView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/wenmingyan1990@gmail.com/MYPickerView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "wenmingyan1990@gmail.com": "wenmy@tuya.com"
+  },
+  "source": {
+    "git": "https://github.com/wenmingyan1990@gmail.com/MYPickerView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "MYPickerView/Classes/**/*"
+}
