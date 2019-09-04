@@ -1,6 +1,0 @@
-framework module MYPickerView {
-  umbrella header "MYPickerView-umbrella.h"
-
-  export *
-  module * { export * }
-}

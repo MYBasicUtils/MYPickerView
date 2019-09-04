@@ -24,6 +24,7 @@
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		90C20A34B68FD0D5FE77B6A8 /* Pods_MYPickerView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE3D1B2B9959C4C965D765C /* Pods_MYPickerView_Example.framework */; };
 		C7E5F9D3703D452027E2CF2E /* Pods_MYPickerView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7452887FEA1F43777FDF2C9 /* Pods_MYPickerView_Tests.framework */; };
+		DE43CA40231FA18D00C4082C /* MYTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE43CA3F231FA18D00C4082C /* MYTimerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 /* Begin PBXFileReference section */
 		1CE3D1B2B9959C4C965D765C /* Pods_MYPickerView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MYPickerView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2568091D2791923C7DD96519 /* Pods-MYPickerView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYPickerView_Example.release.xcconfig"; path = "Target Support Files/Pods-MYPickerView_Example/Pods-MYPickerView_Example.release.xcconfig"; sourceTree = "<group>"; };
-		4686799B711C2672BDCEA829 /* MYPickerView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MYPickerView.podspec; path = ../MYPickerView.podspec; sourceTree = "<group>"; };
+		4686799B711C2672BDCEA829 /* MYPickerView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MYPickerView.podspec; path = ../MYPickerView.podspec; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* MYPickerView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MYPickerView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,9 +62,11 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8ED86F0455476F9D74947188 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8ED86F0455476F9D74947188 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C394771472A7A00999267268 /* Pods-MYPickerView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYPickerView_Example.debug.xcconfig"; path = "Target Support Files/Pods-MYPickerView_Example/Pods-MYPickerView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		ECF11F5994AB62BE5CBBCC57 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		DE43CA3E231FA18D00C4082C /* MYTimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYTimerViewController.h; sourceTree = "<group>"; };
+		DE43CA3F231FA18D00C4082C /* MYTimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYTimerViewController.m; sourceTree = "<group>"; };
+		ECF11F5994AB62BE5CBBCC57 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F2AD4EFC5D0263E6AD9B6844 /* Pods-MYPickerView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYPickerView_Tests.release.xcconfig"; path = "Target Support Files/Pods-MYPickerView_Tests/Pods-MYPickerView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F7452887FEA1F43777FDF2C9 /* Pods_MYPickerView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MYPickerView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCF31670255A44CAE0BA877 /* Pods-MYPickerView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYPickerView_Tests.debug.xcconfig"; path = "Target Support Files/Pods-MYPickerView_Tests/Pods-MYPickerView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -103,7 +106,6 @@
 				FCCF31670255A44CAE0BA877 /* Pods-MYPickerView_Tests.debug.xcconfig */,
 				F2AD4EFC5D0263E6AD9B6844 /* Pods-MYPickerView_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -152,6 +154,8 @@
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				DE43CA3E231FA18D00C4082C /* MYTimerViewController.h */,
+				DE43CA3F231FA18D00C4082C /* MYTimerViewController.m */,
 			);
 			name = "Example for MYPickerView";
 			path = MYPickerView;
@@ -325,10 +329,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MYPickerView_Example/Pods-MYPickerView_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/MYPickerView/MYPickerView.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MYPickerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -364,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE43CA40231FA18D00C4082C /* MYTimerViewController.m in Sources */,
 				6003F59E195388D20070C39A /* MYAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* MYViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,

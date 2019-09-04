@@ -25,18 +25,63 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'wenmingyan1990@gmail.com' => 'wenmy@tuya.com' }
-  s.source           = { :git => 'https://github.com/wenmingyan1990@gmail.com/MYPickerView.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/WenMingYan/MYPickerView.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'MYPickerView/Classes/**/*'
   
+
+  s.prefix_header_contents = <<-EOF
+    #ifdef __OBJC__
+      #ifndef    weakify
+        #if __has_feature(objc_arc)
+
+        #define weakify( x ) \\
+        _Pragma("clang diagnostic push") \\
+        _Pragma("clang diagnostic ignored \\"-Wshadow\\"") \\
+        autoreleasepool{} __weak __typeof__(x) __weak_##x##__ = x; \\
+        _Pragma("clang diagnostic pop")
+
+        #else
+
+        #define weakify( x ) \\
+        _Pragma("clang diagnostic push") \\
+        _Pragma("clang diagnostic ignored \\"-Wshadow\\"") \\
+        autoreleasepool{} __block __typeof__(x) __block_##x##__ = x; \\
+        _Pragma("clang diagnostic pop")
+
+        #endif
+        #endif
+
+        #ifndef    strongify
+        #if __has_feature(objc_arc)
+
+        #define strongify( x ) \\
+        _Pragma("clang diagnostic push") \\
+        _Pragma("clang diagnostic ignored \\"-Wshadow\\"") \\
+        try{} @finally{} __typeof__(x) x = __weak_##x##__; \\
+        _Pragma("clang diagnostic pop")
+
+        #else
+
+        #define strongify( x ) \\
+        _Pragma("clang diagnostic push") \\
+        _Pragma("clang diagnostic ignored \\"-Wshadow\\"") \\
+        try{} @finally{} __typeof__(x) x = __block_##x##__; \\
+        _Pragma("clang diagnostic pop")
+
+        #endif
+        #endif
+
+    #endif
+  EOF
   # s.resource_bundles = {
   #   'MYPickerView' => ['MYPickerView/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'Masonry'
 end

@@ -1,8 +1,9 @@
 use_frameworks!
 
-platform :ios, '8.0'
+platform :ios, '9.0'
 
 target 'MYPickerView_Example' do
+  pod 'Masonry'
   pod 'MYPickerView', :path => '../'
 
   target 'MYPickerView_Tests' do
