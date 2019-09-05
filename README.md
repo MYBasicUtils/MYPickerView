@@ -22,7 +22,7 @@ pod 'MYPickerView'
 
 ## Author
 
-wenmingyan1990@gmail.com, wenmy@tuya.com
+wenmingyan1990@gmail.com
 
 ## License
 
